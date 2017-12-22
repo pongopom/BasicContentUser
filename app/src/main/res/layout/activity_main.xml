@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.basiccontentuser.MainActivity">
+
+    <TextView
+        android:id="@+id/selected_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="no name selected"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary"
+        android:text="Insert name or query to select a name to update or delete"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/create_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="createTapped"
+            android:text="C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="insert(uri, values)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/read_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="readTapped"
+            android:text="R" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="query(uri, projection, selection,selectionArgs, sortOrder)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="updateTapped"
+            android:text="U" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="update(uri, values, selection, selectionArgs)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="deleteTapped"
+            android:text="D" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete(uri, selection, selectionArgs)" />
+    </LinearLayout>
+</LinearLayout>
